@@ -105,8 +105,13 @@ public class MainActivity extends Activity implements TextWatcher, OnClickListen
 	public void afterTextChanged(Editable s) {
 		// TODO Auto-generated method stub
 		String word = s.toString();
-		String result = searchZBB(word);
-		result_tv.setText(result);
+		if(word.equals("")){
+			result_tv.setText(R.string.inputplease);
+		}else{
+			String result = searchZBB(word);
+			result_tv.setText(result);
+		}
+
 		
 	}
 
