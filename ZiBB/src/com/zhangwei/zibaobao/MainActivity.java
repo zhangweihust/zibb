@@ -21,21 +21,14 @@ public class MainActivity extends Activity implements TextWatcher, OnClickListen
 	TextView result_tv;
 	Button clear_btn;
 	
-	public static List<ZiBBUnit> globeZBBs;
-	static {
-		globeZBBs = new ArrayList<ZiBBUnit>();
-		globeZBBs.add(new ZiBBUnit("爸爸", "好", 1));
-		globeZBBs.add(new ZiBBUnit("桌子", "洗碗", 4));
-		globeZBBs.add(new ZiBBUnit("爷爷", "笑", 2));
-		
-	}
+
 	
 	
 	private String searchZBB(String input){
-		if(globeZBBs.size()>0){
+		if(ZiBBUnit.globeZBBs.size()>0){
 			StringBuilder sb = new StringBuilder();
 			boolean hasResult = false;
-			for(ZiBBUnit unit : globeZBBs){
+			for(ZiBBUnit unit : ZiBBUnit.globeZBBs){
 				String re = unit.search(input);
 				if(re!=null){
 					sb.append(re);

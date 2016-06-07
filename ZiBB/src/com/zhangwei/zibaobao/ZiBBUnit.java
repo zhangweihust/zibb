@@ -34,5 +34,14 @@ public class ZiBBUnit {
 	public String toString(){
 		return "A面是" + A + ", B面是" + B + ", 在第" + N + "单元";
 	}
+	
+	public static List<ZiBBUnit> globeZBBs;
+	static {
+		globeZBBs = new ArrayList<ZiBBUnit>();
+		globeZBBs.add(new ZiBBUnit("爸爸", "好", 1));
+		globeZBBs.add(new ZiBBUnit("桌子", "洗碗", 4));
+		globeZBBs.add(new ZiBBUnit("爷爷", "笑", 2));
+		
+	}
 
 }
